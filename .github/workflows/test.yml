@@ -19,7 +19,7 @@ jobs:
         cd /usr/src/gtest
         sudo cmake CMakeLists.txt
         sudo make
-        sudo cp *.a /usr/lib
+        sudo cp *.a /usr/lib/x86_64-linux-gnu/
     - name: Build and test
       run: |
         g++ -o visitor visitor.cpp -lgtest -lpthread
