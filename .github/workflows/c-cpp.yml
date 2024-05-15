@@ -29,14 +29,14 @@ jobs:
 
     - name: Build
       run: |
-        mkdir build/Visitor
-        cd build/Visitor
+        mkdir build/VisitorB
+        cd build/VisitorB
         cmake -DGTEST_ROOT=/tmp/gtest ..
         make
 
     - name: Run tests
       run: |
-        cd build/Visitor
+        cd build/VisitorB
         GTEST_COLOR=1 GTEST_OUTPUT=xml:test_detail.xml GTEST_FILTER=* make test
 
     - name: Archive the build
